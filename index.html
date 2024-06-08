@@ -14,7 +14,7 @@
 <body>    
     <div class="container">
         <h1>Weather App</h1>
-        <input type="text" id="locationInput" placeholder="Please enter a location">
+        <input type="text" id="locationInput" placeholder="Please enter a location" list="list">
         <button onclick="getWeatherInfo()">Get Weather</button>
         <div id="weatherInfo"></div>
         <div class="unit-selection">
@@ -27,10 +27,9 @@
             <label for="windUnit">Wind:</label>
             <select id="windUnit">
                 <option value="kph" class="option">km/h</option>
-                <option value="ms" class="option">m/s</option>
-                <option value="knots" class="option">knots</option>
+                <option value="ms" class="option">m/h</option>
             </select>
-            <button id="geolocateBtn">Use My Location</button>
+            
         </div>
             <div class="search-box">
             </div>
@@ -70,6 +69,12 @@
             </div>
         
     </div>
+    <datalist id="list">
+        <option value="KYIV">KYIV</option>
+        <option value="KHARKIV"></option>
+        <option value="LVIV"></option>
+        <option value="MYKOLAIV"></option>
+    </datalist>
     
 </body>
 </html>
