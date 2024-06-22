@@ -37,37 +37,51 @@
             <div class="weather-box">
                 <div class="box">
                         <div class="weather">
-                            <img src="images/cloud.png">
-                            <p class="temperature">17 <span>°C</span><i class='bx bx-thermometer'></i></p>
+                            <img src="" alt="">
+                            <br>
+                            <span>Temperature: </span>
+                            <span class="temperature">17 <span>°C</span><i class='bx bx-thermometer'></i></span>
                             <p class="description">Broken Clouds</p>
                     </div>
                 </div>
                 <div class="weather-details">
                     <div class="humidity">
-                        <i class="bx bx-water" id="humidity"></i>
+                        
                         <div class="text">
-                            <div class="info-humidity">
-                                <span>0%</span>
-                            </div>
                             <p>
                                 Humidity
                             </p>
+                            <div class="info-humidity">
+                                <i class="bx bx-water" id="humidity"></i>
+                                <span>0%</span>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="wind">
-                        <i class="bx bx-wind" id="wind"></i>
+                        <p>
+                                Wind Speed <i class="bx bx-wind" id="wind"></i>
+                            </p>
+                       
                         <div class="text">
                             <div class="info-wind">
                                 <span>0Km/h</span>
                             </div>
-                            <p>
-                                Wind Speed
-                            </p>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         
+    </div>
+    <div class="days">
+        <div class="item">
+            <div class="data"></div>
+            <div class="icon"></div>
+            <div class="text"></div>
+            <div class="temp"></div>
+            <div class="rain"></div>
+        </div>
     </div>
     <datalist id="list">
         <option value="KYIV">KYIV</option>
@@ -77,4 +91,6 @@
     </datalist>
     
 </body>
+
+
 </html>

@@ -1,3 +1,9 @@
+/* @font-face{
+  font-family: 'Roboto';
+  src: url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+} */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +14,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("https://kartinki.pics/pics/uploads/posts/2022-08/1660684625_2-kartinkin-net-p-fon-dlya-prezentatsii-pogoda-krasivo-2.jpg");
+  background: url("https://i.pinimg.com/736x/0a/72/52/0a725201e1ba4b239fc4d2762810fc1f.jpg");
   background-position: center;
+  flex-direction: column;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
 }
 
+/* https://i.pinimg.com/564x/bb/35/c0/bb35c08dd24ee841841fc06171ecb423.jpg  */
 .container {
   max-width: 400px;
   backdrop-filter: blur(20px);
@@ -56,3 +66,32 @@ button:hover {
 .container h1{
   margin-bottom: 20px;
 }
+
+.days{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+  color: wheat;
+}
+
+.item{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  backdrop-filter: blur(20px);
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.description{
+  margin: 7px;
+}
+.wind{
+  margin-top: 7px;
+}
+
+
+
