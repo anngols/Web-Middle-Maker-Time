@@ -1,4 +1,4 @@
-let url = "http://api.weatherapi.com/v1/forecast.json?key=0fc0fa0b48294f9fb74151643240106&q=Kyiv&days=10&aqi=no&alerts=no"
+let url = "https://api.weatherapi.com/v1/forecast.json?key=0fc0fa0b48294f9fb74151643240106&q=Kyiv&days=10&aqi=no&alerts=no"
 let xhr = new XMLHttpRequest()
 xhr.open("GET", url + "&q=London&aqi=no")
 xhr.send()
@@ -64,7 +64,7 @@ function render(data) {
 document.querySelector("#locationInput").addEventListener("input", function(event){
     let text = event.target.value
     let axhr = new XMLHttpRequest()
-    axhr.open("GET", `http://api.weatherapi.com/v1/forecast.json?key=0fc0fa0b48294f9fb74151643240106&q=${text}&days=10&aqi=no&alerts=no`)
+    axhr.open("GET", `https://api.weatherapi.com/v1/forecast.json?key=0fc0fa0b48294f9fb74151643240106&q=${text}&days=10&aqi=no&alerts=no`)
     axhr.onload = function(){
         let arr = JSON.parse(axhr.response)
         document.querySelector("#list").innerHTML=""
