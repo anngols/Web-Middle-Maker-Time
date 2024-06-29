@@ -1,6 +1,7 @@
-let url = "https://api.weatherapi.com/v1/forecast.json?key=0fc0fa0b48294f9fb74151643240106&q=Kyiv&days=10&aqi=no&alerts=no"
+let city = "Kyiv"
+let url = `https://api.weatherapi.com/v1/forecast.json?key=0fc0fa0b48294f9fb74151643240106`
 let xhr = new XMLHttpRequest()
-xhr.open("GET", url + "&q=London&aqi=no")
+xhr.open("GET", url + `&q=${city}&days=10&aqi=no&alerts=no`)
 xhr.send()
 
 let t = "celsius"
@@ -15,9 +16,9 @@ xhr.onload = function () {
 
 
 function getWeatherInfo() {
-    let city = document.querySelector("#locationInput").value
+    city = document.querySelector("#locationInput").value
     let xhrs = new XMLHttpRequest()
-    xhrs.open("GET", url + `&q=${city}&aqi=no`)
+    xhrs.open("GET", url + `&q=${city}&days=10&aqi=no&alerts=no`)
     xhrs.send()
     xhrs.onload = function () {
         if (xhrs.status >= 400) {
@@ -64,7 +65,7 @@ function render(data) {
 document.querySelector("#locationInput").addEventListener("input", function(event){
     let text = event.target.value
     let axhr = new XMLHttpRequest()
-    axhr.open("GET", `https://api.weatherapi.com/v1/forecast.json?key=0fc0fa0b48294f9fb74151643240106&q=${text}&days=10&aqi=no&alerts=no`)
+    axhr.open("GET", `https://api.weatherapi.com/v1/search.json?key=0fc0fa0b48294f9fb74151643240106&q=${text}`)
     axhr.onload = function(){
         let arr = JSON.parse(axhr.response)
         document.querySelector("#list").innerHTML=""
